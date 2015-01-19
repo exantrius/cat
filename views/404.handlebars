@@ -35,7 +35,7 @@
 -->
 <html>
   <head>
-    <title>Page Not Found</title>
+    <title>{{__ 'Page Not Found'}}</title>
     <link href='http://sailsjs.org/styles/fonts.css' rel='stylesheet'/>
     <style>
       /* Styles included inline since you'll probably be deleting this page anyway */
@@ -54,11 +54,11 @@
           Something's fishy here.
         </h1>
         <h2>
-        	<% if (typeof error!== 'undefined') { %>
-          <%= error %>
-          <% } else { %>
-          The page you were trying to reach doesn't exist.
-          <% } %>
+          {{#if error}}
+            {{error}}
+          {{else}}
+            The page you were trying to reach doesn't exist.
+          {{/if}}
         </h2>
         <p class="help">
           <a href="http://en.wikipedia.org/wiki/HTTP_404">Why</a> might this be happening?

@@ -116,3 +116,41 @@ npm-debug.log
 nbproject
 .idea
 .node_history
+
+
+################################################
+# for ember.js apps
+################################################
+
+# compiled output
+cat-catalog/dist
+cat-catalog/tmp
+
+# dependencies
+cat-catalog/node_modules
+cat-catalog/bower_components
+
+# misc
+cat-catalog/.sass-cache
+cat-catalog/connect.lock
+cat-catalog/coverage/*
+cat-catalog/libpeerconnection.log
+npm-debug.log
+testem.log
+
+# compiled output
+cat-product/dist
+cat-product/tmp
+
+# dependencies
+cat-product/node_modules
+cat-product/bower_components
+
+# misc
+cat-product/.sass-cache
+cat-product/connect.lock
+cat-product/coverage/*
+cat-product/libpeerconnection.log
+
+
+

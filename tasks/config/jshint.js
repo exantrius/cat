@@ -8,6 +8,7 @@ module.exports = function (grunt) {
             "predef": [
                 "document",
                 "window",
+                "sails"
             ],
             "globals": {
                 "module": true
@@ -29,7 +30,8 @@ module.exports = function (grunt) {
             "devel":     true,
             "forin":     false,
             "noarg":     true,
-            "esnext":    true
+            "esnext":    true,
+            "node" :     true
         },
         api: {
             files: {

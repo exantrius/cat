@@ -8,7 +8,10 @@ module.exports = function (grunt) {
             "predef": [
                 "document",
                 "window",
-                "sails"
+                "sails",
+                // services
+                "ProductService",
+                "UtilsService"
             ],
             "globals": {
                 "module": true
@@ -36,7 +39,7 @@ module.exports = function (grunt) {
         api: {
             files: {
                 src: ['api/**/*.js']
-            } 
+            }
         },
         assets: {
             files: {

@@ -23,9 +23,14 @@ var cssFilesToInject = [
 var jsFilesToInject = [
     // Load sails.io before everything else
     'js/dependencies/sails.io.js',
+    'js/vendor/jquery.js',
 
-    'js/vendor/**/*.js',
-    'bootstrap/js/*.js',
+    'bootstrap/js/bootstrap.js',
+
+    'js/vendor/handlebars.js',
+    'js/vendor/ember.js',
+    'js/vendor/ember-data.js',
+    'js/vendor/ember-resolver.js',
 
     // All of the rest of your client-side js files
     // will be injected here in no particular order.

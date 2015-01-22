@@ -19,9 +19,11 @@ module.exports = function (grunt) {
                         'dest':       (PUBLIC_DEV_PREFIX + '/bootstrap'),
                         'js_dest':    (PUBLIC_DEV_PREFIX + '/bootstrap/js'),
                         'css_dest':   (PUBLIC_DEV_PREFIX + '/bootstrap/css'),
+                        'map_dest':   (PUBLIC_DEV_PREFIX + '/bootstrap/css'),
                         'fonts_dest': (PUBLIC_DEV_PREFIX + '/bootstrap/fonts'),
                         'files': [
                             'dist/css/bootstrap.css',
+                            'dist/css/bootstrap.css.map',
                             'dist/js/bootstrap.js',
                             'dist/fonts/glyphicons-halflings-regular.eot',
                             'dist/fonts/glyphicons-halflings-regular.svg',

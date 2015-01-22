@@ -1,6 +1,14 @@
-    <h1>{{product}}</h1>
-    <p>{{price}}</p>
-    <p>{{description}}</p>
-    <div class="image-container">
-        <img src="{{imageSrc}}" alt="{{product}}">
-    </div>
+<div id="wrapper">
+    <section class="product-holder">
+        <header>
+            <h1>{{product}} - {{price}}</h1>
+            <a href="/catalog" class="glyphicon glyphicon-remove"></a>
+        </header>
+        <div class="image-holder">
+            <img src="{{imageSrc}}" alt="{{product}}" class="img-responsive">
+        </div>
+        <div class="description-holder">
+            <p>{{description}}</p>
+        </div>
+    </section>
+</div>

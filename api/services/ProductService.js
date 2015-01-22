@@ -6,6 +6,7 @@
  */
 var fs = require('fs');
 
+// if a problem appears app will return the first product
 function getProduct (productId, callback) {
     var filePath = UtilsService.paths.filePath + productId + '.json';
 

@@ -1,6 +1,64 @@
 {
-	"root": [
-	]
+    "root": [
+        {"id": "men", "name": "MEN"},
+        {"id": "women", "name": "WOMEN"},
+        {"id": "aerie", "name": "AERIE"},
+        {"id": "clearance", "name": "CLEARANCE"},
+        {"id": "factory", "name": "FACTORY"}
+    ],
 
-
+    "men": {
+        "name": "MEN",
+        "data": [
+            {"id": 1},
+            {"id": 1},
+            {"id": 1},
+            {"id": 2}
+        ]
+    },
+    "women": {
+        "name": "WOMEN",
+        "data": [
+            {"id": 3},
+            {"id": 4},
+            {"id": 3},
+            {"id": 4}
+        ]
+    },
+    "aerie": {
+        "name": "AERIE",
+        "data": [
+            {"id": 1},
+            {"id": 3},
+            {"id": 4},
+            {"id": 5}
+        ]
+    },
+    "shoes": {
+        "name": "SHOES",
+        "data": [
+            {"id": 4},
+            {"id": 4},
+            {"id": 5},
+            {"id": 5}
+        ]
+    },
+    "clearance": {
+        "name": "CLEARANCE",
+        "data": [
+            {"id": 3},
+            {"id": 4},
+            {"id": 3},
+            {"id": 5}
+        ]
+    },
+    "factory": {
+        "name": "FACTORY",
+        "data": [
+            {"id": 1},
+            {"id": 1},
+            {"id": 1},
+            {"id": 2}
+        ]
+    }
 }

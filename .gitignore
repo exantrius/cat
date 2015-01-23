@@ -81,6 +81,8 @@ bower_components
 .tmp
 dump.rdb
 
+tmp/
+
 
 
 

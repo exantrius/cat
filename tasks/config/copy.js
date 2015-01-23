@@ -31,7 +31,15 @@ module.exports = function(grunt) {
 				src: ['**/*'],
 				dest: 'www'
 			}]
-		}
+		},
+        phusion: {
+            files: [{
+                expand: true,
+                cwd: '.tmp/public',
+                src: ['**/*'],
+                dest: 'public'
+            }]
+        }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-copy');

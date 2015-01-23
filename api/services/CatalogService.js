@@ -14,17 +14,17 @@ _CatalogService.getCatalog = function (catalogId, next) {
     }
 
     //Expand catalog
-    for (var i = 0; i < catalog.length; i++) {
-        var _el = catalog[i];
+    for (var i = 0; i < catalog.data.length; i++) {
+        var _el = catalog.data[i];
         var res;
         try {
             res = require('../../data/products/' + _el.id + '.json');
         } catch (e) {
             sails.log.error('not found :'  + _el.id + '.json');
         }
-        catalog[i] = {
+        catalog.data[i] = {
             'id':   _el.id,
-            'data': res
+            'data': res.data
         };
     }
     next(null, catalog);

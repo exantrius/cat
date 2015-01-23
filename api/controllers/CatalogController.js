@@ -24,12 +24,10 @@ module.exports = {
                 return res.status(404);
             }
 
-            return res.view('catalog', {catalog: data});
+            return res.view('catalog', {
+                'catalog': data
+            });
 
-        });
-
-        return res.json({
-            todo: 'init() is not implemented yet!'
         });
     }
 };

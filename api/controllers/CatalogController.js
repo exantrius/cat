@@ -13,7 +13,6 @@ module.exports = {
      */
     init: function (req, res) {
 
-        console.log(req.param('catalog_url_id'));
         var catalogUrlId = req.param('catalog_url_id') || null;
 
         if (!catalogUrlId) {

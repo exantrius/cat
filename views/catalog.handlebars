@@ -1,4 +1,15 @@
 <div id="wrappers">
-	<h1>{{catalog.name}}</h1>
-
+    <h1>{{catalog.name}}</h1>
+    <div class="container">
+        <div class="row">
+            
+        {{#each catalog.data}}
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <a href="/product?productId={{id}}&catName={{../catalog_id}}">
+                    <img class="img-responsive" src="{{../img_path}}{{data.image}}">
+                </a>
+            </div>
+        {{/each}}
+        </div>
+    </div>
 </div>

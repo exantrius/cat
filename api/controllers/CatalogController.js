@@ -24,8 +24,15 @@ module.exports = {
                 return res.status(404);
             }
 
+            sails.log.info({
+                'catalog':  data,
+                'img_path': UtilsService.paths.imagePath
+            });
+            sails.log.info(data.data[0]);
             return res.view('catalog', {
-                'catalog': data
+                'catalog':  data,
+                'catalog_id': catalogUrlId,
+                'img_path': UtilsService.paths.imagePath
             });
 
         });

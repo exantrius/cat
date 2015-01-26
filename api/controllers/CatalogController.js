@@ -1,4 +1,4 @@
-/* global CatalogService: treu */
+/* global CatalogService: true */
 /**
  * CatalogController
  *

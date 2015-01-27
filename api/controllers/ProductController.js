@@ -7,6 +7,14 @@
 
 var url = require('url');
 
+// generate category name url for product
+function categoryNameUrl (catName) {
+    if (catName) {
+        return '/catalog/' + catName;
+    }
+    return '/';
+}
+
 module.exports = {
     init: function (req, res) {
         var query = url.parse(req.url, true).query;
@@ -16,7 +24,8 @@ module.exports = {
                 product: data.product,
                 price: data.price,
                 description: data.description,
-                imageSrc: UtilsService.paths.imagePath + data.image
+                imageSrc: UtilsService.paths.imagePath + data.image,
+                catName: categoryNameUrl(query.catName)
             });
         });
     }

@@ -13,7 +13,7 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-    'bootstrap/css/*.css',
+    'vendor/bootstrap/css/*.css',
 
     'styles/**/*.css'
 ];
@@ -25,7 +25,7 @@ var jsFilesToInject = [
     'js/dependencies/sails.io.js',
     'js/vendor/jquery.js',
 
-    'bootstrap/js/bootstrap.js',
+    'vendor/bootstrap/js/bootstrap.js',
 
     'js/vendor/handlebars.js',
     'js/vendor/ember.js',

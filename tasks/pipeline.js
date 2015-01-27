@@ -37,6 +37,10 @@ var jsFilesToInject = [
     'js/**/*.js'
 ];
 
+var fontsFilesToInject = [
+    'vendor/bootstrap/fonts/*.*'
+];
+
 // Client-side HTML templates are injected using the sources below
 // The ordering of these templates shouldn't matter.
 // (uses Grunt-style wildcard/glob/splat expressions)
@@ -60,5 +64,8 @@ module.exports.jsFilesToInject = jsFilesToInject.map(function (path) {
     return '.tmp/public/' + path;
 });
 module.exports.templateFilesToInject = templateFilesToInject.map(function (path) {
+    return 'assets/' + path;
+});
+module.exports.fontsFilesToInject = fontsFilesToInject.map(function (path) {
     return 'assets/' + path;
 });

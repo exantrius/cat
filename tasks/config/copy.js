@@ -11,27 +11,37 @@
  * Copies all directories nd files from the .tmp/public directory into a www directory.
  *
  * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-copy
+ *      https://github.com/gruntjs/grunt-contrib-copy
  */
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-	grunt.config.set('copy', {
-		dev: {
-			files: [{
-				expand: true,
-				cwd: './assets',
-				src: ['**/*.!(coffee|less)'],
-				dest: '.tmp/public'
-			}]
-		},
-		build: {
-			files: [{
-				expand: true,
-				cwd: '.tmp/public',
-				src: ['**/*'],
-				dest: 'www'
-			}]
-		},
+    grunt.config.set('copy', {
+        dev: {
+            files: [{
+                expand: true,
+                cwd: './assets',
+                src: ['**/*.!(coffee|less)'],
+                dest: '.tmp/public'
+            }]
+        },
+        build: {
+            files: [{
+                expand: true,
+                cwd: '.tmp/public',
+                src: ['**/*'],
+                dest: 'www'
+            }]
+        },
+        fonts: {
+            files: [{
+                expand:  true,
+                flatten: true,
+                //cwd:     './assets',
+                src:     require('../pipeline').fontsFilesToInject,
+                dest:    '.tmp/public/fonts',
+                filter:  'isFile'
+            }]
+        },
         phusion: {
             files: [{
                 expand: true,
@@ -40,7 +50,7 @@ module.exports = function(grunt) {
                 dest: 'public'
             }]
         }
-	});
+    });
 
-	grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 };

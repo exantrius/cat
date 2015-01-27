@@ -98,5 +98,14 @@
     <!--SCRIPTS-->
     <script src="/min/production.min.js"></script>
     <!--SCRIPTS END-->
+
+    <!--TODO delete this-->
+    <script>
+      $('.hamburger-link').on('click', function(e) {
+        $('.hamburger-menu').toggleClass("slide-in-open");
+        $('.page-holder').toggleClass("remove-offset adjust-offset");
+        e.preventDefault();
+      });
+    </script>
   </body>
 </html>

@@ -3,6 +3,7 @@ module.exports = function (grunt) {
         'jshint',
         'jscs',
         'compileAssets',
+        'test',
         'linkAssets',
         'watch'
     ]);

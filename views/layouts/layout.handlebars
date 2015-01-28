@@ -37,18 +37,12 @@
   </head>
 
   <body>
-    {{>hamburgerMenu}}
-
-    <div class="page-holder remove-offset">
-      {{>header}}
-
-      <div class="container">
-        <div class="container-inner" style="padding-top: 10px;">
-         {{{body}}}
+        <div class="container">
+            <div id="ember-app"></div>
+            <div class="container-inner" style="padding-top: 10px;">
+                {{{body}}}
+            </div>
         </div>
-      </div>
-    </div>
-
 
 
     {{! <!--
@@ -73,7 +67,7 @@
     --> }}
 
     <!--TEMPLATES-->
-    
+
     <!--TEMPLATES END-->
 
     {{! <!--
@@ -106,15 +100,17 @@
     <script src="/js/vendor/handlebars.js"></script>
     <script src="/js/vendor/ember.js"></script>
     <script src="/js/vendor/ember-data.js"></script>
+    <script src="/js/app/index.js"></script>
+    <script src="/js/app/templates.js"></script>
     <!--SCRIPTS END-->
 
     <!--TODO delete this-->
-    <script>
-      $('.hamburger-link').on('click', function(e) {
-        $('.hamburger-menu').toggleClass("slide-in-open");
-        $('.page-holder').toggleClass("remove-offset adjust-offset");
-        e.preventDefault();
-      });
-    </script>
+    <!--<script>-->
+      <!--$('.hamburger-link').on('click', function(e) {-->
+        <!--$('.hamburger-menu').toggleClass("slide-in-open");-->
+        <!--$('.page-holder').toggleClass("remove-offset adjust-offset");-->
+        <!--e.preventDefault();-->
+      <!--});-->
+    <!--</script>-->
   </body>
 </html>

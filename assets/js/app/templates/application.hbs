@@ -1,0 +1,11 @@
+<div {{bind-attr class=":page-holder isHamburgerMenuVisible:adjust-offset:remove-offset"}}>
+    {{partial '_header'}}
+
+    {{#if isHamburgerMenuVisible}}
+        <div class="content-overlay clickable" {{action "toggleHamburgerMenu"}}></div>
+    {{/if}}
+</div>
+
+{{#slide-in slideInOpen=isHamburgerMenuVisible id="slide-in1" dir="right"}}
+    {{partial '_navigation'}}
+{{/slide-in}}

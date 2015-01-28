@@ -20,13 +20,14 @@ module.exports = function(grunt) {
             // API files to watch:
             files: ['api/**/*']
         },
+
         assets: {
 
             // Assets to watch:
             files: ['assets/**/*', 'tasks/pipeline.js'],
 
             // When assets are changed:
-            tasks: ['syncAssets' , 'linkAssets']
+            tasks: ['emberTemplates', 'syncAssets' , 'linkAssets']
         }
     });
 

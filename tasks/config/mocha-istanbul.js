@@ -7,7 +7,7 @@
 module.exports = function (grunt) {
     grunt.config.set('mocha_istanbul', {
         'coverage_api': {
-            src: './tests/specs/controllers/*.spec.js',
+            src: './tests/specs/**/*.spec.js',
             options: {
                coverageFolder: './.tmp/public/coverage',
                excludes: ['responses'],

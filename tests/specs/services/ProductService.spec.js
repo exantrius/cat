@@ -37,8 +37,10 @@ describe('Product Service', function() {
         });
     });
 
-    it('product service should return a product if productId isn\'t defined', function(done) {
+    it('product service should return a product if productId isn\'t defined and should log the error', function(done) {
+        app.log.error = sinon.spy();
         testingProductService.getProduct( '', function(data){
+            app.log.error.called.should.equal(true);
             should.exist(data);
             data.should.be.an('object');
             done();

@@ -6,23 +6,20 @@
 
 module.exports = function (grunt) {
     grunt.config.set('mocha_istanbul', {
-        coverage: {
-            src: './tests/specs/**',
-            //options: {
-            //    mask: '*.spec.js'
-            //}
-        },
-        coveralls: {
-            src: './tests/specs/**/*.spec.js',
+        'coverage_api': {
+            src: './tests/specs/controllers/*.spec.js',
             options: {
-                coverage: true,
-                check: {
-                    lines: 75,
-                    statements: 75
-                },
-                root: './api'
+               coverageFolder: './.tmp/public/coverage',
+               excludes: ['responses'],
+               // check: {
+               //      lines: 75,
+               //      statements: 75
+               // },
+
+               root: './api',
+               reportFormats: ['text-summary', 'lcov']
             }
-        }
+        },
     });
 
     grunt.event.on('coverage', function (lcovFileContents, done) {
@@ -31,6 +28,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-mocha-istanbul');
 
-    grunt.registerTask('coveralls', ['mocha_istanbul:coveralls']);
-    grunt.registerTask('coverage',  ['mocha_istanbul:coverage']);
+    grunt.registerTask('coverage',  [
+        'mocha_istanbul:coverage_api'
+    ]);
 }

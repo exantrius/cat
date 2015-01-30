@@ -14,11 +14,11 @@ _CatalogService.getCatalog = function (catalogId, next) {
     }
 
     //Expand catalog
-    console.log(catalog.data.length);
+    //console.log(catalog.data.length);
     for (var i = 0; i < catalog.data.length; i++) {
         var _el = catalog.data[i];
         var res;
-        console.log(_el);
+        //console.log(_el);
         try {
             res = require('../../data/products/' + _el.id + '.json');
         } catch (e) {

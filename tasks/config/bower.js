@@ -16,11 +16,11 @@ module.exports = function (grunt) {
 
                 packageSpecific: {
                     'bootstrap': {
-                        'dest':       (PUBLIC_DEV_PREFIX + 'vendor/bootstrap'),
-                        'js_dest':    (PUBLIC_DEV_PREFIX + 'vendor/bootstrap/js'),
-                        'css_dest':   (PUBLIC_DEV_PREFIX + 'vendor/bootstrap/css'),
-                        'map_dest':   (PUBLIC_DEV_PREFIX + 'vendor/bootstrap/css'),
-                        'fonts_dest': (PUBLIC_DEV_PREFIX + 'vendor/bootstrap/fonts'),
+                        'dest':       (PUBLIC_DEV_PREFIX + '/vendor/bootstrap'),
+                        'js_dest':    (PUBLIC_DEV_PREFIX + '/vendor/bootstrap/js'),
+                        'css_dest':   (PUBLIC_DEV_PREFIX + '/vendor/bootstrap/css'),
+                        'map_dest':   (PUBLIC_DEV_PREFIX + '/vendor/bootstrap/css'),
+                        'fonts_dest': (PUBLIC_DEV_PREFIX + '/vendor/bootstrap/fonts'),
                         'files': [
                             'dist/css/bootstrap.css',
                             'dist/css/bootstrap.css.map',

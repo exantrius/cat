@@ -1,4 +1,4 @@
-Newco.ProxyView = Em.Object.extend
+Ember.ProxyView = Em.Object.extend
 
   id: null
 

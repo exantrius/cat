@@ -8,7 +8,7 @@ App.Router = Ember.Router.extend({
     location: 'none'
 });
 
-App.HamburgerLink = Ember.ProxView.extend({
+App.HamburgerLink = Ember.ProxyView.extend({
     click: function () {
         console.log('HamburgerLink on click');
     }

@@ -34,7 +34,13 @@ var jsFilesToInject = [
 
     // All of the rest of your client-side js files
     // will be injected here in no particular order.
-    'js/**/*.js'
+
+    'js/app/templates.js', //AUTO generated Ember.js templates script
+
+    //Client scritps
+    'js/app/index.js'
+
+    //'js/**/*.js'
 ];
 
 var fontsFilesToInject = [

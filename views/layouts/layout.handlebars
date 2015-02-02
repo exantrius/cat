@@ -37,8 +37,7 @@
   </head>
 
   <body>
-    {{>hamburgerMenu}}
-
+    <div id="navigation_wrapper"></div>
     <div class="page-holder remove-offset">
       {{>header}}
 
@@ -48,8 +47,6 @@
         </div>
       </div>
     </div>
-
-
 
     {{! <!--
         Client-side Templates
@@ -102,19 +99,16 @@
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
     <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/underscore.js"></script>
+    <script src="/js/vendor/backbone.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.js"></script>
     <script src="/js/vendor/handlebars.js"></script>
     <script src="/js/vendor/ember.js"></script>
     <script src="/js/vendor/ember-data.js"></script>
+    <script src="/js/app/templates.js"></script>
+    <script src="/js/app/index.js"></script>
+    <script src="/js/app/backboneApp.js"></script>
     <!--SCRIPTS END-->
 
-    <!--TODO delete this-->
-    <script>
-      $('.hamburger-link').on('click', function(e) {
-        $('.hamburger-menu').toggleClass("slide-in-open");
-        $('.page-holder').toggleClass("remove-offset adjust-offset");
-        e.preventDefault();
-      });
-    </script>
   </body>
 </html>

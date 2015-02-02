@@ -24,6 +24,8 @@ var jsFilesToInject = [
     // Load sails.io before everything else
     'js/dependencies/sails.io.js',
     'js/vendor/jquery.js',
+    'js/vendor/underscore.js',
+    'js/vendor/backbone.js',
 
     'vendor/bootstrap/js/bootstrap.js',
 
@@ -34,7 +36,16 @@ var jsFilesToInject = [
 
     // All of the rest of your client-side js files
     // will be injected here in no particular order.
-    'js/**/*.js'
+    //'js/app/proxy_view.js',
+    //'js/app/handlebars.js',
+
+    'js/app/templates.js', //AUTO generated Ember.js templates script
+
+    //Client scritps
+    'js/app/index.js',
+    'js/app/backboneApp.js'
+
+    //'js/**/*.js'
 ];
 
 var fontsFilesToInject = [

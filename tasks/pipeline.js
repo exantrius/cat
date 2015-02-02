@@ -24,6 +24,8 @@ var jsFilesToInject = [
     // Load sails.io before everything else
     'js/dependencies/sails.io.js',
     'js/vendor/jquery.js',
+    'js/vendor/underscore.js',
+    'js/vendor/backbone.js',
 
     'vendor/bootstrap/js/bootstrap.js',
 

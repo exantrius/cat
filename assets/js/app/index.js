@@ -4,16 +4,27 @@ var App = Ember.Application.create({
     //rootElement: '#ember-app'
 });
 
-App.Router = Ember.Router.extend({
-    location: 'none'
-});
-
-App.HamburgerLink = Ember.ProxyView.extend({
-    click: function () {
-        console.log('HamburgerLink on click');
+App.ApplicationRoute = Ember.Route.extend({
+    renderTemplate: function () {
+        console.log('call renderTemplate');
     }
-
 });
+
+App.HamburgerLinkView = Ember.View.extend({
+    templateName: 'hamburger_link'
+});
+
+
+// App.Router = Ember.Router.extend({
+//     location: 'none'
+// });
+
+// App.HamburgerLink = Ember.ProxyView.extend({
+//     click: function () {
+//         console.log('HamburgerLink on click');
+//     }
+
+// });
 
 // App.ApplicationController = Ember.Controller.extend({
 //     isHamburgerMenuVisible: false,

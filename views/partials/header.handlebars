@@ -1,12 +1,8 @@
 <nav class="navbar navbar-inverse">
     <div class="container">
         <div id="navbar_header" class="navbar-header">
-            <a id="hamburger_link" class="hamburger-link glyphicon glyphicon-align-justify" href="#" {{!action "toggleHamburgerMenu"}}></a>
+            <div id="hamburger_link_wrapper"></div>
             <a class="home-page glyphicon glyphicon-home" href="/"></a>
         </div>
     </div>
 </nav>
-<script type="text/x-handlebars" data-template-name="application">
-    \{{proxy id="#navbar_header"}}
-    \{{proxy id="#hamburger_link"}}
-</script>

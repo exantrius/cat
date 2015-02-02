@@ -1,3 +1,4 @@
+// This is a test backbone app and should be adapted when ember integration is completed
 (function(){
 
     window.BackboneApp = {
@@ -11,6 +12,8 @@
         events: {
             click: function(e) {
                 e.preventDefault();
+
+                // This is a stub and hardcode and should be replaced by invoking Ember.Controller actions
                 $('.hamburger-menu').toggleClass("slide-in-open");
                 $('.page-holder').toggleClass("remove-offset adjust-offset");
             }

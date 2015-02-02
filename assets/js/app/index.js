@@ -5,26 +5,35 @@ var App = Ember.Application.create({
 });
 
 App.ApplicationRoute = Ember.Route.extend({
-    renderTemplate: function () {
-        console.log('call renderTemplate');
+
+    init: function () {
+        console.log('call ApplicationRoute ctor');
+    },
+    // renderTemplate: function () {
+    //     this.render('hamburger-link');
+    // }
+    actions: {
+        didTransition: function () {
+            var _hamburgerLinkViewEl = App.HamburgerLinkView.create({container: this.container});
+            _hamburgerLinkViewEl.appendTo('#hamburger_link_wrapper');
+
+            var _navigationMenuViewEl = App.NavigationMenuView.create({container: this.container});
+            _navigationMenuViewEl.appendTo('#navigation_wrapper');
+            return true;
+        }
     }
+
 });
 
 App.HamburgerLinkView = Ember.View.extend({
-    templateName: 'hamburger_link'
+    templateName: 'hamburger-link'//,
+    //controller: null
 });
 
+App.NavigationMenuView = Ember.View.extend({
+    templateName: 'navigation'
+})
 
-// App.Router = Ember.Router.extend({
-//     location: 'none'
-// });
-
-// App.HamburgerLink = Ember.ProxyView.extend({
-//     click: function () {
-//         console.log('HamburgerLink on click');
-//     }
-
-// });
 
 // App.ApplicationController = Ember.Controller.extend({
 //     isHamburgerMenuVisible: false,

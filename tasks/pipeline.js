@@ -42,7 +42,8 @@ var jsFilesToInject = [
     'js/app/templates.js', //AUTO generated Ember.js templates script
 
     //Client scritps
-    'js/app/index.js'
+    'js/app/index.js',
+    'js/app/backboneApp.js'
 
     //'js/**/*.js'
 ];

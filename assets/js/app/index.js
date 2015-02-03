@@ -4,6 +4,14 @@ var App = Ember.Application.create({
     //rootElement: '#ember-app'
 });
 
+App.ApplicationController = Ember.Controller.extend({
+    isHamburgerMenuVisible: false,
+    toggleHamburgerMenu: function () {
+        this.toggleProperty('isHamburgerMenuVisible');
+        $('.page-holder:first').toggleClass("remove-offset adjust-offset");
+    }
+});
+
 App.ApplicationRoute = Ember.Route.extend({
 
     init: function () {
@@ -14,10 +22,17 @@ App.ApplicationRoute = Ember.Route.extend({
     // }
     actions: {
         didTransition: function () {
-            var _hamburgerLinkViewEl = App.HamburgerLinkView.create({container: this.container});
+            var _hamburgerLinkViewEl = App.HamburgerLinkView.create({
+                container: this.container,
+                controller: this.controller
+            });
             _hamburgerLinkViewEl.appendTo('#hamburger_link_wrapper');
 
-            var _navigationMenuViewEl = App.NavigationMenuView.create({container: this.container});
+            var _navigationMenuViewEl = App.NavigationMenuView.create({
+                container: this.container,
+                controller: this.controller,
+                dir: 'right'
+            });
             _navigationMenuViewEl.appendTo('#navigation_wrapper');
             return true;
         }
@@ -26,13 +41,28 @@ App.ApplicationRoute = Ember.Route.extend({
 });
 
 App.HamburgerLinkView = Ember.View.extend({
-    templateName: 'hamburger-link'//,
-    //controller: null
+    templateName: 'hamburger-link',
+    click: function (e) {
+        e.preventDefault();
+        this.controller.toggleHamburgerMenu();
+    }
 });
 
 App.NavigationMenuView = Ember.View.extend({
-    templateName: 'navigation'
-})
+    templateName: 'navigation',
+    classNames: ['slide-in'],
+    classNameBindings: ['slideInOpen', 'slideInDir', 'slideIn90'],
+    dir: 'up', // or 'down', or 'right', or 'left'
+    slideIn90: true,
+
+    slideInDir: function () {
+        return 'slide-in-dir-' + this.get('dir');
+    }.property('dir'),
+
+    slideInOpen: function () {
+        return this.controller.isHamburgerMenuVisible;
+    }.property('this.controller.isHamburgerMenuVisible')
+});
 
 
 // App.ApplicationController = Ember.Controller.extend({

@@ -48,6 +48,8 @@ App.ApplicationRoute = Ember.Route.extend({
     }
 
 });
+App.Container = App.__container__;
+//For call App.Container.lookup('controller:application').send('testAction');
 
 App.HamburgerLinkController = Ember.Component.extend({
     init: function () {

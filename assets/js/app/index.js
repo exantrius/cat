@@ -6,10 +6,19 @@ var App = Ember.Application.create({
 
 App.ApplicationController = Ember.Controller.extend({
     isHamburgerMenuVisible: false,
+    init: function () {
+        console.log('call Application ctor');
+    },
     toggleHamburgerMenu: function () {
         this.toggleProperty('isHamburgerMenuVisible');
         $('.page-holder:first').toggleClass("remove-offset adjust-offset");
+    },
+    actions: {
+        testAction: function () {
+            console.log('test action');
+        }
     }
+
 });
 
 App.ApplicationRoute = Ember.Route.extend({
@@ -68,17 +77,6 @@ App.NavigationMenuView = Ember.View.extend({
     slideInOpen: function () {
         return this.controller.isHamburgerMenuVisible;
     }.property('this.controller.isHamburgerMenuVisible')
-});
-
-App.ApplicationController = Ember.Controller.extend({
-    init: function () {
-        console.log('call Application ctor');
-    },
-    actions: {
-        testAction: function () {
-            console.log('test action');
-        }
-    }
 });
 
 // App.ApplicationController = Ember.Controller.extend({

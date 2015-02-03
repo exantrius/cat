@@ -25,15 +25,31 @@ App.ApplicationRoute = Ember.Route.extend({
 
 });
 
+App.HamburgerLinkController = Ember.Component.extend({
+    init: function () {
+        console.log('hamburger ling ctor');
+    }
+});
+
 App.HamburgerLinkView = Ember.View.extend({
     templateName: 'hamburger-link'//,
-    //controller: null
+    //controller: App.HamburgerLinkController.create()
 });
 
 App.NavigationMenuView = Ember.View.extend({
     templateName: 'navigation'
-})
+});
 
+App.ApplicationController = Ember.Controller.extend({
+    init: function () {
+        console.log('call Application ctor');
+    },
+    actions: {
+        testAction: function () {
+            console.log('test action');
+        }
+    }
+});
 
 // App.ApplicationController = Ember.Controller.extend({
 //     isHamburgerMenuVisible: false,

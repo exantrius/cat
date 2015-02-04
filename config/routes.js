@@ -37,7 +37,8 @@ module.exports.routes = {
   },
 
   '/product': 'ProductController.init',
-  'get /catalog/:catalog_url_id': 'CatalogController.init'
+  'get /catalog/:catalog_url_id': 'CatalogController.init',
+  'get /men-category': 'Category.showMenCategory'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

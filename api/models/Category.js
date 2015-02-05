@@ -5,6 +5,10 @@
  * @docs        :: http://sailsjs.org/#!documentation/models
  */
 
-module.exports = {
-    connection: 'apiaryMockRest'
-};
+var Waterline = require('waterline');
+
+module.exports = Waterline.Collection.extend({
+
+  connection: 'apiaryMockRest',
+
+});

@@ -13,4 +13,6 @@ Application.initializer({
     }
 });
 
-export {};
+export {
+    HamburgerLinkComponent
+};

@@ -38,6 +38,7 @@ var jsFilesToInject = [
     // will be injected here in no particular order.
     //'js/app/proxy_view.js',
     //'js/app/handlebars.js',
+    'js/vendor/cat_components.js',
 
     'js/app/templates.js', //AUTO generated Ember.js templates script
 

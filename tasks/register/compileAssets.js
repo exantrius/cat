@@ -6,6 +6,7 @@ module.exports = function (grunt) {
         'less:dev',
         'copy:dev',
         'coffee:dev',
-        'emberTemplates'
+        'emberTemplates',
+        'build_components'
     ]);
 };

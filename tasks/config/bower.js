@@ -35,6 +35,12 @@ module.exports = function (grunt) {
                         'files': [
                             'dist/ember-resolver.js'
                         ]
+                    },
+                    'ember-utils': {
+                        'js_dest': (PUBLIC_DEV_PREFIX + '/js/vendor/ember-utils'),
+                        'files': [
+                            'dist/globals/main.js'
+                        ]
                     }
                 }
             }

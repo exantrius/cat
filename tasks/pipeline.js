@@ -33,6 +33,7 @@ var jsFilesToInject = [
     'js/vendor/ember.js',
     'js/vendor/ember-data.js',
     'js/vendor/ember-resolver.js',
+    'js/vendor/ember-utils/main.js',
 
     // All of the rest of your client-side js files
     // will be injected here in no particular order.

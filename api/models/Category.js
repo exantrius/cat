@@ -9,6 +9,6 @@ var Waterline = require('waterline');
 
 module.exports = Waterline.Collection.extend({
 
-  connection: 'apiaryMockRest',
+  connection: 'apiaryMockRest'
 
 });

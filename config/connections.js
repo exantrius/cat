@@ -21,98 +21,110 @@
 
 module.exports.connections = {
 
-  /***************************************************************************
-  *                                                                          *
-  * Local disk storage for DEVELOPMENT ONLY                                  *
-  *                                                                          *
-  * Installed by default.                                                    *
-  *                                                                          *
-  ***************************************************************************/
-  localDiskDb: {
-    adapter: 'sails-disk'
-  },
+    /***************************************************************************
+     *                                                                          *
+     * Local disk storage for DEVELOPMENT ONLY                                  *
+     *                                                                          *
+     * Installed by default.                                                    *
+     *                                                                          *
+     ***************************************************************************/
+    localDiskDb: {
+        adapter: 'sails-disk'
+    },
 
-  /***************************************************************************
-  *                                                                          *
-  * MySQL is the world's most popular relational database.                   *
-  * http://en.wikipedia.org/wiki/MySQL                                       *
-  *                                                                          *
-  * Run: npm install sails-mysql                                             *
-  *                                                                          *
-  ***************************************************************************/
-  someMysqlServer: {
-    adapter: 'sails-mysql',
-    host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_MYSQL_USER',
-    password: 'YOUR_MYSQL_PASSWORD',
-    database: 'YOUR_MYSQL_DB'
-  },
+    /***************************************************************************
+     *                                                                          *
+     * MySQL is the world's most popular relational database.                   *
+     * http://en.wikipedia.org/wiki/MySQL                                       *
+     *                                                                          *
+     * Run: npm install sails-mysql                                             *
+     *                                                                          *
+     ***************************************************************************/
+    someMysqlServer: {
+        adapter: 'sails-mysql',
+        host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
+        user: 'YOUR_MYSQL_USER',
+        password: 'YOUR_MYSQL_PASSWORD',
+        database: 'YOUR_MYSQL_DB'
+    },
 
-  /***************************************************************************
-  *                                                                          *
-  * MongoDB is the leading NoSQL database.                                   *
-  * http://en.wikipedia.org/wiki/MongoDB                                     *
-  *                                                                          *
-  * Run: npm install sails-mongo                                             *
-  *                                                                          *
-  ***************************************************************************/
-  someMongodbServer: {
-    adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
-    // database: 'your_mongo_db_name_here'
-  },
+    /***************************************************************************
+     *                                                                          *
+     * MongoDB is the leading NoSQL database.                                   *
+     * http://en.wikipedia.org/wiki/MongoDB                                     *
+     *                                                                          *
+     * Run: npm install sails-mongo                                             *
+     *                                                                          *
+     ***************************************************************************/
+    someMongodbServer: {
+        adapter: 'sails-mongo',
+        host: 'localhost',
+        port: 27017,
+        // user: 'username',
+        // password: 'password',
+        // database: 'your_mongo_db_name_here'
+    },
 
-  /***************************************************************************
-  *                                                                          *
-  * PostgreSQL is another officially supported relational database.          *
-  * http://en.wikipedia.org/wiki/PostgreSQL                                  *
-  *                                                                          *
-  * Run: npm install sails-postgresql                                        *
-  *                                                                          *
-  *                                                                          *
-  ***************************************************************************/
-  somePostgresqlServer: {
-    adapter: 'sails-postgresql',
-    host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_POSTGRES_USER',
-    password: 'YOUR_POSTGRES_PASSWORD',
-    database: 'YOUR_POSTGRES_DB'
-  },
+    /***************************************************************************
+     *                                                                          *
+     * PostgreSQL is another officially supported relational database.          *
+     * http://en.wikipedia.org/wiki/PostgreSQL                                  *
+     *                                                                          *
+     * Run: npm install sails-postgresql                                        *
+     *                                                                          *
+     *                                                                          *
+     ***************************************************************************/
+    somePostgresqlServer: {
+        adapter: 'sails-postgresql',
+        host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
+        user: 'YOUR_POSTGRES_USER',
+        password: 'YOUR_POSTGRES_PASSWORD',
+        database: 'YOUR_POSTGRES_DB'
+    },
 
 
-  /***************************************************************************
-  *                                                                          *
-  * More adapters: https://github.com/balderdashy/sails                      *
-  *                                                                          *
-  ***************************************************************************/
-  apiaryMockRest: {
-      adapter: 'sails-rest',
-      type: 'json',             // expected response type (json | string | http)
-      host: 'private-f86be-georgiypodsvetov.apiary-mock.com',   // api host
-      //port: 80,                 // api port
-      protocol: 'https',         // HTTP protocol (http | https)
-      rejectUnauthorized: true, // prevent https connections that use a self-signed certificate
-      //pathname: '/api/v1',      // base api path
-      resource: 'categories',           // resource path to use (overrides model name)
-      action: null,             // action to use for the given resource ([resource]/run)
-      query: {},                // query parameters to provide with all GET requests
-      methods: {                // overrides default HTTP methods used for each CRUD action
-          create: 'post',
-          find: 'get',
-          update: 'put',
-          destroy: 'del'
-      },
-      beforeFormatResult: function(result){return result},    // alter result prior to formatting
-      afterFormatResult: function(result){return result},     // alter result after formatting
-      beforeFormatResults: function(results){return results}, // alter results prior to formatting
-      afterFormatResults: function(results){return results}  // alter results after formatting
-      //cache: {                  // optional cache engine
-      //engine : require('someCacheEngine')
-      //}
-  }
+    /***************************************************************************
+     *                                                                          *
+     * More adapters: https://github.com/balderdashy/sails                      *
+     *                                                                          *
+     ***************************************************************************/
+    apiaryMockRest: {
+        adapter: 'sails-rest',
+        type: 'json',             // expected response type (json | string | http)
+        host: 'localhost',   // api host
+        port: 3000,                 // api port
+        //protocol: 'https',         // HTTP protocol (http | https)
+        //rejectUnauthorized: true, // prevent https connections that use a self-signed certificate
+        //pathname: '/api/v1',      // base api path
+        resource: 'categories',           // resource path to use (overrides model name)
+        action: null,             // action to use for the given resource ([resource]/run)
+        query: {},                // query parameters to provide with all GET requests
+        methods: {                // overrides default HTTP methods used for each CRUD action
+            create: 'post',
+            find: 'get',
+            update: 'put',
+            destroy: 'del'
+        },
+        beforeFormatResult: function (result) {
+            return result
+        },    // alter result prior to formatting
+        afterFormatResult: function (result) {
+            return result
+        },     // alter result after formatting
+        beforeFormatResults: function (results) {
+            return results
+        }, // alter results prior to formatting
+        afterFormatResults: function (results) {
+            return results
+        }  // alter results after formatting
+        //cache: {                  // optional cache engine
+        //engine : require('someCacheEngine')
+        //}
+    },
+
+    fooConnection: {
+        adapter: 'foo'
+    }
 
 
 };

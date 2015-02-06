@@ -13,24 +13,24 @@ module.exports = {
      */
     showMenCategory: function (req, res) {
 
-        //request('https://private-f86be-georgiypodsvetov.apiary-mock.com/categories/mens/',
-        //    function (error, response, body) {
-        //        if (!error && response.statusCode == 200) {
-        //            console.log(body) // Show the HTML for the Google homepage.
-        //    }
-        //});
+        console.log('let`s try to find category');
 
         // Find men category and send answer
         Category.find({where: {id: 'mens'}}, function (err, category) {
+            console.log('lookup of category is finished');
+
             if (err) {
+                console.log('error occured in adapter: ', err);
                 return res.negotiate(err);
             }
 
             if (!category) {
+                console.log('not found category');
                 return res.notFound();
             }
 
-            console.log(category);
+            console.log('category was found: ', category);
+            res.json(category);
         });
 
     }

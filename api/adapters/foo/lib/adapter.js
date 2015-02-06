@@ -169,7 +169,7 @@ module.exports = (function () {
      *
      */
     find: function (connection, collection, options, cb) {
-		var response = {'jopa': 'here'};
+		var response = {'enjoyable': 'here'};
 		return cb(null, response);
     },
 

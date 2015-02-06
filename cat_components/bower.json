@@ -1,31 +1,31 @@
 {
-  "name": "cat-components",
-  "version": "0.2.0",
-  "description": "A suite Cat-project components for Ember.js",
-  "authors": [
-    "Andrew Sednev <exantrius@gmail.com>"
-  ],
-  "ignore": [
-    "bower_components",
-    "examples",
-    "node_modules",
-    "test",
-    "tmp",
-    "**/.*",
-    "Brocfile.js",
-    "karma.conf.js",
-    "package.json",
-    "testem.json"
-  ],
-  "dependencies": {
-    "handlebars": ">=2.0.0 < 3.0.0",
-    "jquery": "^1.11.1",
-    "ember": ">=1.9",
-    "ember-utils": "~0.1.0",
-    "ic-styled": "~1.1.6"
-  },
-  "resolutions": {
-    "handlebars": ">= 2.0.0 < 3.0.0",
-    "ember": ">=1.9"
-  }
+    "name": "cat-components",
+    "version": "0.2.0",
+    "description": "A suite Cat-project components for Ember.js",
+    "authors": [
+        "Andrew Sednev <exantrius@gmail.com>"
+    ],
+    "ignore": [
+        "bower_components",
+        "examples",
+        "node_modules",
+        "test",
+        "tmp",
+        "**/.*",
+        "Brocfile.js",
+        "karma.conf.js",
+        "package.json",
+        "testem.json"
+    ],
+    "dependencies": {
+        "handlebars":  ">=2.0.0 < 3.0.0",
+        "jquery":      "^1.11.1",
+        "ember":       ">=1.9",
+        "ember-utils": "~0.1.0",
+        "ic-styled":   "~1.1.6"
+    },
+    "resolutions": {
+        "handlebars": ">= 2.0.0 < 3.0.0",
+        "ember":      ">=1.9"
+    }
 }

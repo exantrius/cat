@@ -31,7 +31,7 @@ App.ApplicationRoute = Ember.Route.extend({
     // }
     actions: {
         didTransition: function () {
-            var _hamburgerLinkViewEl = App.HamburgerLinkView.create({
+            var _hamburgerLinkViewEl = Em.CatComponets.HamburgerLinkComponent.create({
                 container: this.container,
                 controller: this.controller
             });

@@ -10,8 +10,8 @@ define(
 
     var HamburgerLink = Component.extend(WithConfigMixin, {
 
-    	tagName: 'a',
-    	
+        tagName: 'a',
+        classNames: ['hamburger-link', 'glyphicon', 'glyphicon-align-justify']
 
     });
 

@@ -3,7 +3,7 @@ module.exports = function (grunt) {
         'clean:dev',
         'bower:dev',
         'jst:dev',
-        'less:dev',
+        'stylus:dev',
         'copy:dev',
         'coffee:dev',
         'emberTemplates',

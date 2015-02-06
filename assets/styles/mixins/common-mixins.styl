@@ -1,0 +1,4 @@
+opacity(n = 0.5)
+      opacity n
+      if support-for-ie
+        filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')

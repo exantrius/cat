@@ -11,7 +11,7 @@ App.ApplicationController = Ember.Controller.extend({
     },
     toggleHamburgerMenu: function () {
         this.toggleProperty('isHamburgerMenuVisible');
-        $('.page-holder:first').toggleClass("remove-offset adjust-offset");
+        $('.page-holder:first').toggleClass('remove-offset adjust-offset');
     },
     actions: {
         testAction: function () {
@@ -30,19 +30,33 @@ App.ApplicationRoute = Ember.Route.extend({
     //     this.render('hamburger-link');
     // }
     actions: {
+        testAction: function () {
+            console.log('obj');
+        },
         didTransition: function () {
-            var _hamburgerLinkViewEl = Em.CatComponets.HamburgerLinkComponent.create({
+            var _hamburgerLink = Em.CatComponets.HamburgerLinkComponent.create({
                 container: this.container,
-                controller: this.controller
+                controller: this.controller,
+                'on-click': 'testAction'
+                // 'on-click': function (e) {
+                //     e.preventDefault();
+                //     console.log('on click');
+                // }
             });
-            _hamburgerLinkViewEl.appendTo('#hamburger_link_wrapper');
+            _hamburgerLink.appendTo('#hamburger_link_wrapper');
 
-            var _navigationMenuViewEl = App.NavigationMenuView.create({
+            var _navigationMenu = Em.CatComponets.HamburgerMenuComponent.create({
                 container: this.container,
                 controller: this.controller,
                 dir: 'right'
             });
-            _navigationMenuViewEl.appendTo('#navigation_wrapper');
+            _navigationMenu.appendTo('#navigation_wrapper');
+            // var _navigationMenuViewEl = App.NavigationMenuView.create({
+            //     container: this.container,
+            //     controller: this.controller,
+            //     dir: 'right'
+            // });
+            // _navigationMenuViewEl.appendTo('#navigation_wrapper');
             return true;
         }
     }
@@ -51,35 +65,35 @@ App.ApplicationRoute = Ember.Route.extend({
 App.Container = App.__container__;
 //For call App.Container.lookup('controller:application').send('testAction');
 
-App.HamburgerLinkController = Ember.Component.extend({
-    init: function () {
-        console.log('hamburger ling ctor');
-    }
-});
+// App.HamburgerLinkController = Ember.Component.extend({
+//     init: function () {
+//         console.log('hamburger ling ctor');
+//     }
+// });
 
-App.HamburgerLinkView = Ember.View.extend({
-    templateName: 'hamburger-link',
-    click: function (e) {
-        e.preventDefault();
-        this.controller.toggleHamburgerMenu();
-    }
-});
+// App.HamburgerLinkView = Ember.View.extend({
+//     templateName: 'hamburger-link',
+//     click: function (e) {
+//         e.preventDefault();
+//         this.controller.toggleHamburgerMenu();
+//     }
+// });
 
-App.NavigationMenuView = Ember.View.extend({
-    templateName: 'navigation',
-    classNames: ['slide-in'],
-    classNameBindings: ['slideInOpen', 'slideInDir', 'slideIn90'],
-    dir: 'up', // or 'down', or 'right', or 'left'
-    slideIn90: true,
+// App.NavigationMenuView = Ember.View.extend({
+//     templateName: 'navigation',
+//     classNames: ['slide-in'],
+//     classNameBindings: ['slideInOpen', 'slideInDir', 'slideIn90'],
+//     dir: 'up', // or 'down', or 'right', or 'left'
+//     slideIn90: true,
 
-    slideInDir: function () {
-        return 'slide-in-dir-' + this.get('dir');
-    }.property('dir'),
+//     slideInDir: function () {
+//         return 'slide-in-dir-' + this.get('dir');
+//     }.property('dir'),
 
-    slideInOpen: function () {
-        return this.controller.isHamburgerMenuVisible;
-    }.property('this.controller.isHamburgerMenuVisible')
-});
+//     slideInOpen: function () {
+//         return this.controller.isHamburgerMenuVisible;
+//     }.property('this.controller.isHamburgerMenuVisible')
+// });
 
 // App.ApplicationController = Ember.Controller.extend({
 //     isHamburgerMenuVisible: false,

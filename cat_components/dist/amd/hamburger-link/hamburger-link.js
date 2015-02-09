@@ -11,9 +11,20 @@ define(
     var HamburgerLink = Component.extend(WithConfigMixin, {
 
         tagName: 'a',
-        classNames: ['hamburger-link', 'glyphicon', 'glyphicon-align-justify']
+        classNames: ['hamburger-link', 'glyphicon', 'glyphicon-align-justify'],
+
+        'on-click': undefined,
+
+        onClick: function () {
+            this.sendAction('on-click');
+        }.on('click')
+
+        // click: function (e) {
+        //     e.preventDefault();
+        //     this.controller.toggleHamburgerMenu();        
+        // }
 
     });
 
-    __exports__["default"] = HamburgerLink
+    __exports__["default"] = HamburgerLink;
   });

@@ -7,7 +7,6 @@
 
 module.exports = {
 
-  //connection: 'apiaryMockRest'
-  connection: 'fooConnection'
+  connection: 'restConnection'
 
 };

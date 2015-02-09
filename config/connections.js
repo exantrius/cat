@@ -88,42 +88,13 @@ module.exports.connections = {
      * More adapters: https://github.com/balderdashy/sails                      *
      *                                                                          *
      ***************************************************************************/
-    apiaryMockRest: {
-        adapter: 'sails-rest',
-        type: 'json',             // expected response type (json | string | http)
-        host: 'localhost',   // api host
-        port: 3000,                 // api port
-        //protocol: 'https',         // HTTP protocol (http | https)
-        //rejectUnauthorized: true, // prevent https connections that use a self-signed certificate
-        //pathname: '/api/v1',      // base api path
-        resource: 'categories',           // resource path to use (overrides model name)
-        action: null,             // action to use for the given resource ([resource]/run)
-        query: {},                // query parameters to provide with all GET requests
-        methods: {                // overrides default HTTP methods used for each CRUD action
-            create: 'post',
-            find: 'get',
-            update: 'put',
-            destroy: 'del'
-        },
-        beforeFormatResult: function (result) {
-            return result
-        },    // alter result prior to formatting
-        afterFormatResult: function (result) {
-            return result
-        },     // alter result after formatting
-        beforeFormatResults: function (results) {
-            return results
-        }, // alter results prior to formatting
-        afterFormatResults: function (results) {
-            return results
-        }  // alter results after formatting
-        //cache: {                  // optional cache engine
-        //engine : require('someCacheEngine')
-        //}
-    },
 
-    fooConnection: {
-        adapter: 'foo'
+    restConnection: {
+        adapter: 'rest',
+        host: 'localhost', // api host
+        port: 3000, // api port
+        pathname: null, // base api path
+        type: 'json' // exprected response type (json | ...)
     }
 
 

@@ -19,6 +19,10 @@ module.exports = {
     init: function (req, res) {
         var query = url.parse(req.url, true).query;
 
+        // fixme remove
+        //categoryNameUrl(query);
+        //res.view('product');
+
         ProductService.getProduct(query.productId , function (data) {
             return res.view('product', {
                 product: data.product,

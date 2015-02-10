@@ -1,4 +1,4 @@
-var sailsHelper = require('../../helpers/sailsHelper'),
+var sailsHelper = require('../test/helpers/sailsHelper'),
     sinon = require('sinon'),
     should = require('chai').should();
 
